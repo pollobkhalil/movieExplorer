@@ -1,4 +1,9 @@
 import { useEffect, useMemo, useState } from 'react';
+import { AlertTriangle, Film, Search } from 'lucide-react';
+import Footer from '../components/Footer';
+import MovieModal from '../components/MovieModal';
+import Navbar from '../components/Navbar';
+import MovieCard from '../components/MovieCard';
 
 
 
@@ -45,11 +50,7 @@ export default function Movies() {
   const [error, setError] = useState(null);
   const [selectedMovie, setSelectedMovie] = useState(null);
 
-  // Runs once on mount (empty query -> initial catalog) and again every
-  // time the debounced search term changes. AbortController cancels any
-  // in-flight request from a previous keystroke so a slow, stale response
-  // can never overwrite a newer one, and the dependency array is limited
-  // to `debouncedQuery` so this can never loop.
+  
   useEffect(() => {
     const controller = new AbortController();
     const trimmedQuery = debouncedQuery.trim();
@@ -145,7 +146,7 @@ export default function Movies() {
             {!error && !loading && movies.length > 0 && (
               <div className="grid grid-cols-2 gap-4 sm:gap-6 md:grid-cols-3 lg:grid-cols-5">
                 {movies.map((movie) => (
-                  <MovieCard key={movie.id} movie={movie} onSelect={setSelectedMovie} />
+                 <MovieCard key={movie.id} movie={movie} onSelect={setSelectedMovie} />
                 ))}
               </div>
             )}
@@ -153,9 +154,9 @@ export default function Movies() {
         </div>
       </main>
 
-      <Footer />
+   <Footer />
 
-      <MovieModal movie={selectedMovie} onClose={() => setSelectedMovie(null)} />
+      <MovieModal movie={selectedMovie} onClose={() => setSelectedMovie(null)}/>
     </div>
   );
 }
