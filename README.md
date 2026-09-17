@@ -40,8 +40,6 @@ Open your browser and navigate to http://localhost:5173 (or the port displayed i
 
 
 📁 Project Structure
-text
-
 src/
 ├── components/
 │   ├── Navbar.jsx          # Top navigation bar
@@ -69,24 +67,3 @@ Note: The search endpoint returns an array of objects containing a show property
 
 📱 Responsive Design
 The application is fully responsive and optimized for various devices:
-
-
-🌍 Deployment
-To deploy this application on platforms like Vercel or Netlify:
-
-Build the project:
-bash
-
-npm run build
-Deploy:
-Upload the generated dist/ folder to your hosting provider, OR
-Connect your GitHub repository to Vercel/Netlify for automatic continuous deployments.
-
-📄 License
-This project is open-source and available under the MIT License.
-
-👤 Author
-Your Name
-
-GitHub: pollobkhalil
-LinkedIn: https://www.linkedin.com/in/pollob-khalil-b87753285/
