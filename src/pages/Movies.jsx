@@ -4,6 +4,8 @@ import Footer from '../components/Footer';
 import MovieModal from '../components/MovieModal';
 import Navbar from '../components/Navbar';
 import MovieCard from '../components/MovieCard';
+import { useDebounce } from '../hooks/useDebounce';
+
 
 
 

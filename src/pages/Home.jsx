@@ -1,4 +1,6 @@
+
 import { Link } from 'react-router-dom';
+
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
@@ -35,7 +37,7 @@ export default function Home() {
                 to="/movies"
                 className="flex items-center gap-2 rounded-lg bg-amber-500 px-6 py-3 text-base font-semibold text-slate-950 transition-transform hover:scale-[1.03] hover:bg-amber-400"
               >
-                <Search className="h-5 w-5" />
+                
                 Explore Now
               </Link>
               
